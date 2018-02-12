@@ -6,7 +6,7 @@ This file contains text you can copy and paste for the examples in Cloud Academy
 
 ### Running a More Complex Job
 ```
-telcodatagen.exe 1000 .2 2
+telcodatagen 1000 .2 2
 ```
 
 ### Conclusion
