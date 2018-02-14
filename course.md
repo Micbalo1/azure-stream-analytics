@@ -4,6 +4,21 @@ This file contains text you can copy and paste for the examples in Cloud Academy
 ### Introduction
 [Azure Free Trial](https://azure.microsoft.com/free)  
 
+### Creating and Running a Job
+```
+SELECT 
+    System.Timestamp AS EndTime,
+    dspl AS SensorName,
+    Avg(temp) AS Temperature
+INTO
+   output
+FROM
+    InputStream
+TIMESTAMP BY time
+GROUP BY SlidingWindow(second, 30), dspl
+HAVING Avg(temp) > 100
+```
+
 ### Running a More Complex Job
 ```
 telcodatagen 1000 .2 2
