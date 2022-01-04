@@ -23,6 +23,10 @@ HAVING Avg(temp) > 100
 ```
 telcodatagen 1000 .2 2
 ```
+If this gives you a format error, then try the following command instead:
+```
+telcodatagen 1000 0,2 2
+```
 ```
 SELECT  System.Timestamp as Time, 
      CS1.CallingIMSI, 
